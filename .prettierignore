@@ -1,0 +1,6 @@
+.eslintignore
+.gitignore
+.husky
+.prettierignore
+tsconfig.json
+.nvmrc
