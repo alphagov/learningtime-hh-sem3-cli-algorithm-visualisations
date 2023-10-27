@@ -8,7 +8,7 @@
     "sourceMap": true,
     "outDir": "dist", // where to put the compiled JS files
     "target": "ES2020", // which level of JS support to target
-    "module": "ES2022", // which system for the program AMD, UMD, System, CommonJS
+    "module": "CommonJS", // which system for the program AMD, UMD, System, CommonJS
   },
   "include": ["src/**/*"], // which files to compile
   "exclude": ["node_modules"], // which files to skip
