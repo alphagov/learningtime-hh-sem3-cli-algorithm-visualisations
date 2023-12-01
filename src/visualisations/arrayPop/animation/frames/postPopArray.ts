@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { SQUARE_BRACKET } from '../../../../config/colours';
+import { SQUARE_BRACKET } from '../../../../config/index';
 
 export const postPopArray = () => {
   console.log(`

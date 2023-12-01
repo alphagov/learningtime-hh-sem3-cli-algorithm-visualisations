@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { ARRAY_ELEMENT, SQUARE_BRACKET } from '../../../config/colours';
+import { ARRAY_ELEMENT, SQUARE_BRACKET } from '../../../config/index';
 
 export const beforeArray = () => {
   console.log(
