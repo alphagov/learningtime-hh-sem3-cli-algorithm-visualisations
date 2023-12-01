@@ -7,3 +7,11 @@ export const CHOICES = {
   pop: '.pop()',
   bubblesort: 'bubblesort',
 };
+
+export const METADATA = {
+  pop: {
+    method: '.pop()',
+    description:
+      'It removes the last element from an array and returns the removed element. It changes the length of the original array.',
+  },
+};
