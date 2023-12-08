@@ -2,10 +2,10 @@ import { clearAboveLines } from '../../../utils/clearAboveLines';
 import { prePopArray } from './frames/prePopArray';
 import { postPopArray } from './frames/postPopArray';
 
-export const animatePop = async () => {
-  prePopArray();
+export const animatePop = async (arr: number[]) => {
+  prePopArray(arr);
   await clearAboveLines(8, 2000);
-  postPopArray();
+  postPopArray(arr);
   await clearAboveLines(8, 2000);
-  animatePop();
+  animatePop(arr);
 };

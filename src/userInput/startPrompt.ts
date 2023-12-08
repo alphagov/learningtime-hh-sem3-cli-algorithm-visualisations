@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 import { handlePromptAnswer } from './handlePromptAnswer';
-import { choices } from '../config/choices';
+import { CHOICES } from '../config/index';
 
 export const startPrompt = async () => {
   console.log(chalk.red('Please select an option:\n'));
@@ -9,7 +9,7 @@ export const startPrompt = async () => {
     type: 'list',
     name: 'visualisation',
     message: 'Visualisations of native JavaScript methods and algorithms',
-    choices: [choices.arrayPop],
+    choices: [CHOICES.pop, CHOICES.bubblesort],
   });
   handlePromptAnswer(choice.visualisation);
 };

@@ -1,13 +1,17 @@
-import chalk from 'chalk';
-import { SQUARE_BRACKET } from '../../../../config/colours';
+import { GREEN, SQUARE_BRACKET } from '../../../../config/index';
+import { colouriseElements } from '../../../../utils/coulouriseElements';
 
-export const postPopArray = () => {
+export const postPopArray = (arr: number[]) => {
+  const unchangedArrElements = arr.slice(0, -1);
+  const colourisedUnchangedArrElements = colouriseElements(
+    unchangedArrElements,
+    GREEN,
+  );
+
   console.log(`
-${chalk.green('After:')}   ${SQUARE_BRACKET('[')} ${chalk.green(
-    '1',
-  )} , ${chalk.green('2')} , ${chalk.green('3')} , ${chalk.green(
-    '4',
-  )} ${SQUARE_BRACKET(']')}
+${GREEN('After:')}   ${SQUARE_BRACKET(
+    '[',
+  )}${colourisedUnchangedArrElements}${SQUARE_BRACKET(']')}
 
 
 
