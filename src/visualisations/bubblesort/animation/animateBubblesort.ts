@@ -1,4 +1,16 @@
-export const animateBubblesort = async (arr: number[]) => {
+import chalk from 'chalk';
+import { GREEN, RED } from '../../../config';
+
+type ColourisingHandler = (
+  arr: number[],
+  j: number,
+  colour: chalk.Chalk,
+) => Promise<void>;
+
+export const animateBubblesort = async (
+  arr: number[],
+  colourisingHandler: ColourisingHandler,
+) => {
   let i, j;
   const len = arr.length;
 
@@ -12,9 +24,9 @@ export const animateBubblesort = async (arr: number[]) => {
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
         isSwapped = true;
-        console.log('implement me')
+        await colourisingHandler(arr, j, GREEN);
       } else if (arr[j] < arr[j + 1] && arr[j + 1]) {
-        console.log('implement me')
+        await colourisingHandler(arr, j, RED);
       }
     }
 

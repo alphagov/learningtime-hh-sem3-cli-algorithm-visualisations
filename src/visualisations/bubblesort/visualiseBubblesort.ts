@@ -9,11 +9,12 @@ import {
   METADATA,
 } from '../../config';
 import { displayStaticArray } from '../../utils/staticText/displayStaticArray';
+import { coulouriseIndices } from './animation/handler/colouriseIndices';
 
 export const visualiseBubblesort = () => {
   displayMetadata(METADATA.bubblesort.method, METADATA.bubblesort.description);
   horizontalRule();
   displayStaticArray(BEFORE_TITLE, DESCENDING_ARRAY);
   displayStaticArray(AFTER_TITLE, DESCENDING_ARRAY, GREEN);
-  animateBubblesort(DESCENDING_ARRAY);
+  animateBubblesort(DESCENDING_ARRAY, coulouriseIndices);
 };
